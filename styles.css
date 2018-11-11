@@ -6,11 +6,13 @@
 }
 
 body {
-  text-align: center;
-  padding: 50px 150px;
-  font: 14px var(--font-family);
-  color: var(--foreground-color);
-  background-color: var(--background-color);
+	text-align: center;
+	margin: 0 auto;
+	font: 14px var(--font-family);
+	color: var(--foreground-color);
+	background-color: var(--background-color);
+	width: 620px;
+	max-width: 90%;
 }
 
 ::selection {
@@ -18,26 +20,27 @@ body {
 	color: white;
 }
 
-h1 {
-  font-size: 3rem;
+header {
+	font-size: 2rem;
+	margin-top: 3rem;
+}
+
+header h1 {
+	margin-bottom: 1rem;
 }
 
 h5 {
 	font-size: 1rem;
 	margin-bottom: 0;
+	border-bottom: 1px dashed orange;
+	display: inline-block;
 }
 
 /* ** SECTION ** */
 section {
   display: block;
   text-align: left;
-  width: 650px;
   margin: 0 auto;
-}
-
-section header {
-	display: flex;
-	align-items: center;
 }
 
 section summary {
@@ -71,6 +74,14 @@ a {
 a:hover {
   color: var(--highlight);
   text-decoration: none;
+}
+
+a.twitter:hover {
+	color: #1DA1F3;
+}
+
+a.linkedin:hover {
+	color: #0077B5;
 }
 
 i {
