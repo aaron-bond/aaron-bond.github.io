@@ -105,7 +105,7 @@ a:focus-visible {
 	display: flex;
 	flex-direction: column;
 	gap: 24px;
-	padding: 28px 0 40px;
+	padding: 28px 0;
 }
 
 .intro {
@@ -128,6 +128,26 @@ a:focus-visible {
 	margin: 0;
 	font: 15px var(--mono);
 	color: var(--comment);
+}
+
+.role span:first-child::before {
+	content: "// * ";
+}
+
+.role span + span::before {
+	content: " · ";
+}
+
+/* On phones, one title per line, each as its own comment */
+@media (max-width: 640px) {
+	.role span {
+		display: block;
+	}
+
+	.role span::before,
+	.role span + span::before {
+		content: "// * ";
+	}
 }
 /****************/
 
